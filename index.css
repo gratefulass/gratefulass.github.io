@@ -33,46 +33,37 @@ noscript{
 	left: 0rem;
 	opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.indicator{
+	position: absolute;
+	top: calc(110% - 55px);
+	left: 50%;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	border-bottom: 2px solid #333;
+	border-right: 2px solid #333;
+	transform: rotate(45deg);
+	opacity: 0;
+	transition: all 1000ms ease;
+}
+span{
+	top: calc(110% - 70px);
+	width: 100%;
+	left: 0px;
+	font-size: 10px;
+	position: absolute;
+	display: block;
+	text-align: center;
+	opacity: 0;
+	transition: all 1000ms ease;
+}
+.indicator.revealed, span.revealed{
+	opacity: 1;
+}
+.indicator.revealed{
+	top: calc(100% - 55px);
+}
+span.revealed{
+	top: calc(100% - 70px);
+}
